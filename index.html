@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>@yau</title>
     <style>
         body {
             background-color: black;
@@ -10,7 +11,7 @@
             height: 100vh;
             margin: 0;
         }
-        
+
         .profile-box {
             text-align: center;
             color: white;
@@ -18,35 +19,115 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
-        
+
+        .background-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-image: url('https://cdn.discordapp.com/attachments/1167210930845798451/1168294608854331453/A0737992-9A88-4440-85D5-1AD10A899619.gif?ex=65513e24&is=653ec924&hm=f9e39998345288a4fe1a53914ca9cc77d83ae52f5b1ad8f7cd6d94346ecaea1f');
+            background-size: cover;
+        }
+
+        .border {
+            width: 500px; 
+            height: 280px; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            border: 0px solid rgba(0, 0, 0, 0.5);
+            border-radius: 20px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            z-index: 0;
+        }
+
         .profile-image {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
             background-image: url('https://media.discordapp.net/attachments/1120865433566842960/1149677489396920340/a_4c97062a311b8fabf0eb67800d42f906.gif');
             background-size: cover;
             background-position: center;
-            margin: 0 auto;
         }
-        
-        .discord-button {
-            margin-top: 20px;
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            z-index: 2;
+            transition: opacity 0.5s ease;
         }
-        
-        .discord-button img {
-            width: 100px; 
-            height: 50px; 
+
+        .enter-button {
+            font-size: 26px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            color: #fff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
             background: none;
+            border: none;
+            filter: none;
+            font-family: 'Dela Gothic One', cursive;/* Set the font-family */
+        }
+
+        .profile-details {
+            z-index: 1;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="background-image"></div>
+
+    <!-- The overlay with the button -->
+    <div class="overlay" id="overlay">
+        <button class="enter-button" id="enterButton">CLICK TO ENTER</button>
+    </div>
+
     <div class="profile-box">
-        <div class="profile-image"></div>
-        <h1>yau</h1>
-        <p></p>
-        <h2>Owner of discord.gg/fastly</h2>
+    </div>
+
+    <script>
+        const enterButton = document.getElementById('enterButton');
+        const overlay = document.getElementById('overlay');
+        const profileBox = document.querySelector('.profile-box');
+
+        enterButton.addEventListener('click', () => {
+            overlay.style.opacity = 0;
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                profileBox.style.filter = 'none';
+            }, 500); 
+        });
+    </script>
+    <audio id="backgroundMusic" src="yau.bio music.mp3" loop></audio>
+</body>
+    <div class="background-image"></div>
+
+    <div class="profile-box">
+        <div class="border">
+            <div class="profile-image"></div>
+            <div class="profile-details">
+                <h1>yau</h1>
+                <h2>Owner of discord.gg/fastly</h2>
+            </div>
+        </div>
     </div>
 </body>
 </html>
