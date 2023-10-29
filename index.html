@@ -5,7 +5,7 @@
     <meta property="og:description" content="@ yau.bio">
     <meta property="og:url" content="https://yau.bio">
     <meta property="theme-color" content="#2b2d31">
-    <title>/yau</title>
+    <title>yau on top</title>
     <script>
         function typeWriter(text, i, direction, titleElement) {
             if (direction === "forward") {
@@ -34,21 +34,6 @@
                 }
             }
         }
-
-        // Add this variable at the beginning of your JavaScript code
-        let viewCount = 1;
-
-        window.onload = function() {
-            var title = "/yau";
-            typeWriter(title, 0, "forward");
-
-            // Update the view count
-            const viewCountElement = document.getElementById('view-count');
-            viewCountElement.textContent = viewCount;
-
-            // Increase the view count for each visit
-            viewCount++;
-        };
     </script>
 </head>
 <body>
@@ -170,13 +155,12 @@
         align-items: center;
     }
 
-    #counter-image {
-        width: 20px;
-        margin-right: 5px;
+    .glow-text {
+        text-shadow: 0 0 10px white; /* Adjust the size as needed */
     }
-
-    #view-count {
-        color: white;
+    
+    .crown {
+        box-shadow: 0 0 10px white; /* Adjust the size as needed */
     }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
@@ -217,14 +201,10 @@
     <div class="border">
         <div class="profile-image"></div>
         <div class="profile-details">
-            <img class="crown" src="https://plgoztnonlmrccdukuxo.supabase.co/storage/v1/object/public/badges/early_supporter.svg" alt="Crown Emoji">
-            <h1>yau</h1>
-            <h2>discord.gg/fastly | just join it now</h2>
+            <img class="crown" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png" alt="Crown Emoji">
+            <h1 class="glow-text">yau</h1>
+            <h2 class="glow-text">discord.gg/fastly | just join it now</h2>
         </div>
-    </div>
-    <div class="profile-view-count">
-        <img src="https://images.vexels.com/media/users/3/157834/isolated/lists/bdfb1520c6d54b62d41913509ef033b7-angry-kawaii-emoticon-eye.png" alt="Counter" id="counter-image">
-        <span id="view-count">1</span>
     </div>
 </div>
 </body>
