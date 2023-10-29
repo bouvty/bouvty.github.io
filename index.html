@@ -1,8 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>@yau</title>
-    <style>
+<head>r
+    <meta property="og:title" content="/yau"><meta property="og:description" content="@ yau.bio"><meta property="og:image" content="https://cdn.discordapp.com/attachments/1164394515587661954/1168309139328475308/SSyhEHw.jpg?ex=65514bac&is=653ed6ac&hm=199a78066986ff335248515249a85b7de6a804629142d331095b4760d52b5f77&"><meta property="og:url" content="https://yau.bio"><meta property="theme-color" content="#2b2d31">
+    <title>/yau</title>
+    <script>
+        function typeWriter(text, i, direction, titleElement) {
+            if (direction === "forward") {
+                if (i <= text.length) {
+                    document.title = text.substring(0, i);
+                    i++;
+                    setTimeout(function() {
+                        typeWriter(text, i, "forward");
+                    }, 200); 
+                } else {
+                    setTimeout(function() {
+                        typeWriter(text, i, "backward");
+                    }, 1000); 
+                }
+            } else if (direction === "backward") {
+                if (i >= 0) {
+                    document.title = text.substring(0, i);
+                    i--;
+                    setTimeout(function() {
+                        typeWriter(text, i, "backward");
+                    }, 200); 
+                } else {
+                    setTimeout(function() {
+                        typeWriter(text, 0, "forward");
+                    }, 1000); 
+                }
+            }
+        }
+
+        window.onload = function() {
+            var title = "/yau"; 
+            typeWriter(title, 0, "forward");
+        };
+    </script>
+</head>
+<body>
+    <style>    
         body {
             background-color: black;
             display: flex;
@@ -28,13 +65,13 @@
             width: 100%;
             height: 100%;
             z-index: 0;
-            background-image: url('https://cdn.discordapp.com/attachments/1167210930845798451/1168294608854331453/A0737992-9A88-4440-85D5-1AD10A899619.gif?ex=65513e24&is=653ec924&hm=f9e39998345288a4fe1a53914ca9cc77d83ae52f5b1ad8f7cd6d94346ecaea1f');
+            background-image: url('https://media2.giphy.com/media/78nXADhnE4BQfG4gup/giphy.gif');
             background-size: cover;
         }
 
         .border {
-            width: 500px; 
-            height: 280px; 
+            width: 700px; 
+            height: 340px; 
             background-color: rgba(0, 0, 0, 0.5); 
             border: 0px solid rgba(0, 0, 0, 0.5);
             border-radius: 20px; 
@@ -50,7 +87,7 @@
             border-radius: 100%;
             width: 100px;
             height: 100px;
-            background-image: url('https://media.discordapp.net/attachments/1120865433566842960/1149677489396920340/a_4c97062a311b8fabf0eb67800d42f906.gif');
+            background-image: url('https://cdn.discordapp.com/attachments/1164394515587661954/1168309139328475308/SSyhEHw.jpg?ex=65514bac&is=653ed6ac&hm=199a78066986ff335248515249a85b7de6a804629142d331095b4760d52b5f77&');
             background-size: cover;
             background-position: center;
         }
@@ -83,16 +120,41 @@
             background: none;
             border: none;
             filter: none;
-            font-family: 'Dela Gothic One', cursive;/* Set the font-family */
+            font-family: 'Dela Gothic One', cursive;
         }
+
+        
+        .crown {
+            width: 40px;
+        }
+
+         .profile-details h1 {
+            margin-right: 0; /* Set the right margin to zero */
+        }
+        
+        .profile-details h2 {
+            margin-left: 0; /* Set the left margin to zero */
+        }
+
 
         .profile-details {
             z-index: 1;
+        }
+
+        .button-link {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .button-link img {
+            width: 50px; /* Adjust width as needed */
+            height: auto; /* Auto-adjust height to maintain aspect ratio */
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 </head>
 <body>
+    <audio id="backgroundMusic" src="yau.bio_music.mp3" loop></audio>
     <div class="background-image"></div>
 
     <!-- The overlay with the button -->
@@ -102,7 +164,7 @@
 
     <div class="profile-box">
     </div>
- <audio id="backgroundMusic" src="yau.bio music.mp3" loop></audio>
+
     <script>
         const enterButton = document.getElementById('enterButton');
         const overlay = document.getElementById('overlay');
@@ -123,9 +185,11 @@
         <div class="border">
             <div class="profile-image"></div>
             <div class="profile-details">
-                <h1>yau</h1>
-                <h2>Owner of discord.gg/fastly</h2>
-            </div>
+                    <img class="crown" src="https://plgoztnonlmrccdukuxo.supabase.co/storage/v1/object/public/badges/early_supporter.svg" alt="Crown Emoji">
+                    <h1>yau</h1>            
+                <h2>discord.gg/fastly | just join it now</h2>
+                        
+               </a>
         </div>
     </div>
 </body>
