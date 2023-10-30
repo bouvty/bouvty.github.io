@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta property="og:title" content="/yau">
     <meta property="og:description" content="@ yau.bio">
     <meta property="og:url" content="https://yau.bio">
@@ -35,135 +36,7 @@
             }
         }
     </script>
-</head>
-<body>
-<style>
-    body {
-        background-color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-
-    .profile-box {
-        text-align: center;
-        color: white;
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    .background-image {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        background-image: url('https://media2.giphy.com/media/78nXADhnE4BQfG4gup/giphy.gif');
-        background-size: cover;
-    }
-
-    .border {
-        width: 800px;
-        height: 390px;
-        background-color: rgba(0, 0, 0, 0.5);
-        border: 0px solid rgba(0, 0, 0, 0.5);
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-        z-index: 0;
-    }
-
-    .profile-image {
-        border-radius: 100%;
-        width: 100px;
-        height: 100px;
-        background-image: url('https://cdn.discordapp.com/attachments/1163182383395242044/1168483391574904842/hwO6aad.jpg?ex=6551edf5&is=653f78f5&hm=34175313c35fd954e103586bf8685228a936b5d37b30ab9defeadc963fc15042&');
-        background-size: cover;
-        background-position: center;
-    }
-
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        backdrop-filter: blur(10px);
-        z-index: 2;
-        transition: opacity 0.5s ease;
-    }
-
-    .enter-button {
-        font-size: 26px;
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        color: #fff;
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
-        background: none;
-        border: none;
-        filter: none;
-        font-family: 'Dela Gothic One', cursive;
-    }
-
-    .crown {
-        width: 28px;
-    }
-
-    .profile-details h1 {
-        margin-right: 0;
-    }
-
-    .profile-details h2 {
-        margin-left: 0;
-    }
-
-    .profile-details {
-        z-index: 1;
-    }
-
-    .button-link {
-        display: inline-block;
-        margin: 10px;
-    }
-
-    .button-link img {
-        width: 50px;
-        height: auto;
-    }
-
-    .profile-view-count {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        display: flex;
-        align-items: center;
-    }
-
-    .glow-text {
-        text-shadow: 0 0 10px white;
-    }
-    
-    .crown {
-        box-shadow: 0 0 10px white;
-    }
-</style>
-<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="background-image"></div>
@@ -173,18 +46,24 @@
 </div>
 
 <div class="profile-box">
+    <audio id="backgroundMusic" loop>
+        <source src="yau.bio_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 </div>
 
 <script>
     const enterButton = document.getElementById('enterButton');
     const overlay = document.getElementById('overlay');
     const profileBox = document.querySelector('.profile-box');
+    const backgroundMusic = document.getElementById('backgroundMusic');
 
     enterButton.addEventListener('click', () => {
         overlay.style.opacity = 0;
         setTimeout(() => {
             overlay.style.display = 'none';
             profileBox.style.filter = 'none';
+            backgroundMusic.play();
         }, 500);
     });
 </script>
