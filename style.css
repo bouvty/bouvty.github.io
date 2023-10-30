@@ -1,0 +1,205 @@
+
+    body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+
+    .profile-box {
+        text-align: center;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+    
+
+    .background-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-image: url('https://cdn.discordapp.com/attachments/1168202859444179075/1168567054429851739/jaydes_-_slugs_official_music_video_dir._1karlwithak.gif?ex=65523be0&is=653fc6e0&hm=66bc55f4ca82aa3e6931e7becce6417b0ca4ccc596335896d44907a6aed5c175&'); 
+        background-size: cover;
+    }
+    
+
+    .border {
+        width: 800px;
+        height: 390px;
+        background-color: rgba(0, 0, 0, 0.9);
+        border: 1px solid rgba(0, 0, 0, 0.384);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        z-index: 0;
+    }
+
+    .profile-image {
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+        background-image: url('https://cdn.discordapp.com/attachments/1163182383395242044/1168483391574904842/hwO6aad.jpg?ex=6551edf5&is=653f78f5&hm=34175313c35fd954e103586bf8685228a936b5d37b30ab9defeadc963fc15042&');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        z-index: 2;
+        transition: opacity 0.5s ease;
+    }
+
+    .enter-button {
+        font-size: 26px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color: #fff;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
+        background: none;
+        border: none;
+        filter: none;
+        font-family: 'Dela Gothic One', cursive;
+    }
+
+    .crown {
+        width: 28px;
+    }
+
+    .profile-details h1 {
+        margin-right: 0;
+    }
+
+    .profile-details h2 {
+        margin-left: 0;
+    }
+
+    .profile-details {
+        z-index: 1;
+    }
+
+    .button-link {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .button-link img {
+        width: 50px;
+        height: auto;
+    }
+
+    .profile-view-count {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        font-size: 0; 
+    }
+    
+    .button-container a {
+        display: inline-block;
+        margin: 0;
+    }
+    
+    .button-container img {
+        width: 100px;
+        height: auto;
+    }
+    
+    .glow-text {
+        position: relative;
+        z-index: 1;
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+        color : rgb(59, 59, 59);
+        display: inline;
+    }
+
+    .glow-text2 {
+        text-shadow: 0 0 10px white;
+        color: rgb(250, 250, 250);
+        font-size: 24px;
+        font-family: Arial, sans-serif;
+    }
+
+
+    
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+    
+    .sparkle {
+        position: absolute;
+        top: -20px; 
+        z-index: 2;
+        pointer-events: none;
+        opacity: 1;
+        width: 100px; 
+        height: auto; 
+    }
+
+
+    .glow-text3 {
+        text-shadow: 0 0 10px white;
+        color: black; 
+        font-size: 36px;
+        font-family: Arial, sans-serif;
+    }
+
+    @keyframes sparkleAnimation {
+        0%, 100% { opacity: 0; text-shadow: 0 0 10px pink; }
+        50% { opacity: 1; text-shadow: 0 0 10px pink; }
+    }
+
+    .text::after {
+        content: "|";
+        animation: blink 1s steps(5, start) infinite;
+      }
+      
+      @keyframes blink {
+        to {
+          visibility: hidden;
+        }
+      }
+
+    .cursor {
+        color: white;
+    }
+    
+
+    

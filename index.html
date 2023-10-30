@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta property="og:title" content="/yau">
+    <meta property="og:description" content="@ yau.bio">
+    <meta property="og:url" content="https://yau.bio">
+    <meta property="theme-color" content="#000000">
+    <link rel="icon" type="image/gif" href="gun.gif">
+    <script>
+        function typeWriter(text, i, direction, titleElement) {
+            if (direction === "forward") {
+                if (i <= text.length) {
+                    document.title = text.substring(0, i);
+                    i++;
+                    setTimeout(function() {
+                        typeWriter(text, i, "forward");
+                    }, 200);
+                } else {
+                    setTimeout(function() {
+                        typeWriter(text, i - 1, "backward");
+                    }, 1000);
+                }
+            } else if (direction === "backward") {
+                if (i >= 0) {
+                    document.title = text.substring(0, i);
+                    i--;
+                    setTimeout(function() {
+                        typeWriter(text, i, "backward");
+                    }, 200);
+                } else {
+                    setTimeout(function() {
+                        typeWriter(text, 0, "forward");
+                    }, 1000); 
+                }
+            }
+        }
+
+        typeWriter("/yau", 0, "forward");
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-image"></div>
+
+    <div class="overlay" id="overlay">
+        <button class="enter-button" id="enterButton">CLICK TO ENTER</button>
+        <audio id="backgroundMusic" loop>
+            <source src="yau.bio_music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="profile-box">
+        <audio id="backgroundMusic" loop>
+            <source src="yau.bio_music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        const enterButton = document.getElementById('enterButton');
+        const overlay = document.getElementById('overlay');
+        const profileBox = document.querySelector('.profile-box');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+
+        enterButton.addEventListener('click', () => {
+            overlay.style.opacity = 0;
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                profileBox.style.filter = 'none';
+                backgroundMusic.play();
+            }, 500);
+        });
+    </script>
+</body>
+<div class="background-image"></div>
+
+<div class="profile-box">
+    <div class="border">
+        <div class="profile-image"></div>
+        <div class="profile-details">
+            <div class="container">
+                <img src="https://media.discordapp.net/attachments/987149728800198686/991834200309248070/sparkle.gif" class="sparkle">
+                <h1 class="glow-text">@ yau</h1>
+                <h2 class="glow-text2" id="text"></h2>
+                <script src="script.js"></script>
+            </div>
+        </div>
+        <body>
+            <div class="button-container">
+                <a href="https://discord.gg/fastly" target="_blank">
+                    <img src="discord.png" alt="Click Here">
+                </a><!--
+                --><a href="https://www.tiktok.com/@fastlymembers" target="_blank">
+                    <img src="tiktok.png" alt="Click Here">
+                </a><!--
+                --><a href="https://telegram/@yau102" target="_blank">
+                    <img src="telegram.png" alt="Click Here">
+                </a>
+            </div>
+</div>
+</body>
+</html>
