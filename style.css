@@ -6,6 +6,7 @@
         align-items: center;
         height: 100vh;
         margin: 0;
+        font-family: 'Finlandica', sans-serif;
     }
 
 
@@ -34,8 +35,8 @@
     .border {
         width: 800px;
         height: 390px;
-        background-color: rgba(0, 0, 0, 0.9);
-        border: 1px solid rgba(0, 0, 0, 0.384);
+        background-color: rgba(0, 0, 0, 0.849);
+        border: 1px solid rgba(0, 0, 0, 0);
         border-radius: 20px;
         display: flex;
         flex-direction: column;
@@ -47,8 +48,8 @@
 
     .profile-image {
         border-radius: 100%;
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         background-image: url('https://cdn.discordapp.com/attachments/1163182383395242044/1168483391574904842/hwO6aad.jpg?ex=6551edf5&is=653f78f5&hm=34175313c35fd954e103586bf8685228a936b5d37b30ab9defeadc963fc15042&');
         background-size: cover;
         background-position: center;
@@ -83,6 +84,15 @@
         border: none;
         filter: none;
         font-family: 'Dela Gothic One', cursive;
+    }
+
+    .image-container {
+        display: flex;
+    }
+    
+    .image-container img {
+        margin: 0 20px; /* Adjust the margin as needed */
+        max-width: 100px; /* Adjust the width as needed */
     }
 
     .crown {
