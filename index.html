@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta property="og:title" content="/yau">
-    <meta property="og:description" content="@ yau.bio">
-    <meta property="og:url" content="https://yau.bio">
-    <meta property="theme-color" content="#2b2d31">
-    <title>/yau</title>
-    <script>
-        function typeWriter(text, i, direction, titleElement) {
-            if (direction === "forward") {
-                if (i <= text.length) {
-                    document.title = text.substring(0, i);
-                    i++;
-                    setTimeout(function() {
-                        typeWriter(text, i, "forward");
-                    }, 200);
-                } else {
-                    setTimeout(function() {
-                        typeWriter(text, i, "backward");
-                    }, 1000);
-                }
-            } else if (direction === "backward") {
-                if (i >= 0) {
-                    document.title = text.substring(0, i);
-                    i--;
-                    setTimeout(function() {
-                        typeWriter(text, i, "backward");
-                    }, 200);
-                } else {
-                    setTimeout(function() {
-                        typeWriter(text, 0, "forward");
-                    }, 1000);
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta property="og:title" content="/yau">
+        <meta property="og:description" content="@ yau.bio">
+        <meta property="og:url" content="https://yau.bio">
+        <meta property="theme-color" content="#000000">
+        <link rel="icon" type="gif" href="gun.gif"> 
+        <script>
+            function typeWriter(text, i, direction, titleElement) {
+                if (direction === "forward") {
+                    if (i <= text.length) {
+                        document.title = text.substring(0, i);
+                        i++;
+                        setTimeout(function() {
+                            typeWriter(text, i, "forward");
+                        }, 200);
+                    } else {
+                        setTimeout(function() {
+                            typeWriter(text, i - 1, "backward");
+                        }, 1000); 
+                    }
+                } else if (direction === "backward") {
+                    if (i >= 0) {
+                        document.title = text.substring(0, i);
+                        i--;
+                        setTimeout(function() {
+                            typeWriter(text, i, "backward");
+                        }, 200); 
+                    } else {
+                        setTimeout(function() {
+                            typeWriter(text, 0, "forward");
+                        }, 1000);
+                    }
                 }
             }
-        }
-    </script>
+    
+            typeWriter("/yau", 0, "forward");
+        </script>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 </head>
 <body>
