@@ -1,6 +1,7 @@
 const textElement = document.getElementById('text');
 const sentences = [
-  "join discord.gg/fastly",
+  "discord.gg/fancy",
+  "discord.gg/fastly",
   "developer in python, lua",
   "yau on top",
   "yau.bio",
