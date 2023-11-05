@@ -4,8 +4,7 @@ const sentences = [
   "discord.gg/fastly",
   "developer in python, lua",
   "yau on top",
-  "yau.bio",
-  "panel.fastly.vip"
+  "yau.bio"
 ];
 
 let sentenceIndex = 0;
