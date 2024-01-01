@@ -1,8 +1,8 @@
 const textElement = document.getElementById('text');
 const sentences = [
-  "Dreaming, focusing on life",
+  "having a break",
   "developer in python, lua",
-  "yau on top",
+  "steve/yau on top",
   "yau.bio"
 ];
 
