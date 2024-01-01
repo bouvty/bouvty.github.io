@@ -27,7 +27,7 @@
         width: 100%;
         height: 100%;
         z-index: 0;
-        background-image: url('https://cdn.discordapp.com/attachments/1172676510285561890/1172681453570629652/healbanner_J1Ma5oNm.jpg?ex=656133b5&is=654ebeb5&hm=91e39c04e12c190c47b1e6b2a0e2ea228bf79bdff051ec428b713f1de30791e4&'); 
+        background-image: url('https://media1.giphy.com/media/326d5iOUoYY8N6uFPm/giphy.gif'); 
         background-size: cover;
     }
     
@@ -50,7 +50,7 @@
         border-radius: 100%;
         width: 150px;
         height: 150px;
-        background-image: url('https://cdn.discordapp.com/attachments/1172676510285561890/1172681127639650304/IMG_6017.jpg?ex=65613368&is=654ebe68&hm=77067f15237a07925292de7e5dfd048aecf7346c48fa642c616ed527e083f9e9&');
+        background-image: url('https://cdn.discordapp.com/avatars/1163174089083592786/2deb7befaf5f861bbd0543af1e9f3665.png?size=1024&format=webp&quality=lossless&width=0&height=256');
         background-size: cover;
         background-position: center;
     }
