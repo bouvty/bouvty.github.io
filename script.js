@@ -2,9 +2,6 @@ const textElement = document.getElementById('text');
 const sentences = [
   "having a break",
   "steve/yau on top",
-  "developer in python, lau and websites",
-  "RIP sao services, joinify and fastly",
-  "having a break",
   "yau.bio"
 ];
 
