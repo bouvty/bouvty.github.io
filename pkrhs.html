@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Finlandica&display=swap" rel="stylesheet">
+    <meta property="og:title" content="pkrhs sexy man">
+    <meta property="og:description" content="@ betray.vip/pkrhs">
+    <meta property="og:url" content="https://betray.vip/pkrhs">
+    <meta property="theme-color" content="#000000">
+    <link rel="icon" type="image/gif" href="gun.gif">
+    <script>
+        function typeWriter(text, i, direction, titleElement) {
+            if (direction === "forward") {
+                if (i <= text.length) {
+                    document.title = text.substring(0, i);
+                    i++;
+                    setTimeout(function() {
+                        typeWriter(text, i, "forward");
+                    }, 200);
+                } else {
+                    setTimeout(function() {
+                        typeWriter(text, i - 1, "backward");
+                    }, 1000);
+                }
+            } else if (direction === "backward") {
+                if (i >= 0) {
+                    document.title = text.substring(0, i);
+                    i--;
+                    setTimeout(function() {
+                        typeWriter(text, i, "backward");
+                    }, 200);
+                } else {
+                    setTimeout(function() {
+                        typeWriter(text, 0, "forward");
+                    }, 1000); 
+                }
+            }
+        }
+
+        typeWriter("pkrhs better", 0, "forward");
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Finlandica', sans-serif;
+    }
+
+    canvas {
+        display: block;
+        position: absolute;
+    }
+
+    .profile-box {
+        text-align: center;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+    
+
+    .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background: url('https://cdn.discordapp.com/attachments/1206362850856271882/1207038921024733245/background.png?ex=65de3198&is=65cbbc98&hm=934f671c930eb4bdfd8871694edeaa231775728b2895ad3b33f865cb0e8f7d3d&') no-repeat center center;
+        background-size: cover;
+    }
+
+    .border {
+        width: 800px;
+        height: 390px;
+        background-color: rgba(0, 0, 0, 0.849);
+        border: 1px solid rgba(0, 0, 0, 0);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        z-index: 0;
+    }
+
+    .profile-image {
+        border-radius: 100%;
+        width: 150px;
+        height: 150px;
+        background-image: url('https://cdn.discordapp.com/attachments/1193392643573559307/1207041832526282773/eee18cf056878fed8e0bc971a0c0e405.png?ex=65de344e&is=65cbbf4e&hm=c4a90f8c406ddf021839bb27270b4c51fabc9c53955fd3c6efd5f0d743aa2521&');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        z-index: 2;
+    }
+    .enter-button {
+        font-size: 26px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color: #ffffff;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
+        background: none;
+        border: none;
+        filter: none;
+        font-family: 'Dela Gothic One';
+    }
+
+    .image-container {
+        display: flex;
+    }
+    
+    .image-container img {
+        margin: 0 20px; 
+        max-width: 100px; 
+    }
+
+    .crown {
+        width: 28px;
+    }
+
+    .profile-details h1 {
+        margin-right: 0;
+    }
+
+    .profile-details h2 {
+        margin-left: 0;
+    }
+
+    .profile-details {
+        z-index: 1;
+    }
+
+    .button-link {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .button-link img {
+        width: 50px;
+        height: auto;
+    }
+
+    .container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        font-size: 0; 
+    }
+    
+    .button-container a {
+        display: inline-block;
+        margin: 0;
+    }
+    
+    .button-container img {
+        width: 100px;
+        height: auto;
+    }
+    
+    .glow-text {
+        position: relative;
+        z-index: 1;
+        text-shadow: 0 0 10px rgb(148, 148, 148);
+        color : rgb(255, 244, 244);
+        display: inline;
+    }
+
+    .glow-text2 {
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+        color: rgb(250, 250, 250);
+        font-size: 24px;
+        font-family: Arial, sans-serif;
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+    
+    .sparkle {
+        position: absolute;
+        top: -20px; 
+        z-index: 2;
+        pointer-events: none;
+        opacity: 1;
+        width: 100px; 
+        height: auto; 
+    }
+
+
+    .glow-text3 {
+        text-shadow: 0 0 10px white;
+        color: black; 
+        font-size: 36px;
+        font-family: Arial, sans-serif;
+    }
+
+    @keyframes sparkleAnimation {
+        0%, 100% { opacity: 0; text-shadow: 0 0 10px pink; }
+        50% { opacity: 1; text-shadow: 0 0 10px pink; }
+    }
+
+    .text::after {
+        content: "|";
+        animation: blink 1s steps(5, start) infinite;
+      }
+      
+      @keyframes blink {
+        to {
+          visibility: hidden;
+        }
+      }
+
+
+
+</style>
+<body>
+    <div class="background-image"></div>
+
+    <div class="overlay" id="overlay">
+        <button class="enter-button" id="enterButton">CLICK TO ENTER</button>
+        <audio id="backgroundMusic" loop>
+            <source src="musicpk.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="profile-box">
+        <audio id="backgroundMusic" loop>
+            <source src="musicpk.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        const enterButton = document.getElementById('enterButton');
+        const overlay = document.getElementById('overlay');
+        const profileBox = document.querySelector('.profile-box');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+
+        enterButton.addEventListener('click', () => {
+            overlay.style.opacity = 0;
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                profileBox.style.filter = 'none';
+                backgroundMusic.play();
+            }, 500);
+        });
+    </script>
+</body>
+<div class="background-image"></div>
+
+<div class="profile-box">
+    <div class="border">
+        <div class="profile-image"></div>
+        <div class="profile-details">
+            <div class="container">
+                <img src="https://media.discordapp.net/attachments/987149728800198686/991834200309248070/sparkle.gif" class="sparkle">
+                <h1 class="glow-text">
+                    <span>@ pkrhs</span>
+                    <img src="https://cdn.discordapp.com/attachments/1171536760770146344/1172881244837642240/verified.png?ex=6561edc7&is=654f78c7&hm=db3ca298e4f982e988dac350aa1c33eb4f3f985aae8531764c8778d5d4b165ab&" alt="Verified Image">
+                    <img src="https://i.imgur.com/MgZBYRy.png" alt="Second Image">
+                </h1>
+                <h2 class="glow-text2" id="text"></h2>
+                <script src="scriptpk.js"></script>
+                <img src="https://discord.c99.nl/widget/theme-4/327897959465222145.png" style="width: 300px;">
+            </div>
+            </div>
+        </div>
+        
+</body>
+</html>
